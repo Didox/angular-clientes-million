@@ -1,0 +1,14 @@
+<form class="form-signin">
+  <h1 class="h3 mb-3 font-weight-normal">Digite o seu login e senha para entrar</h1>
+  <label for="inputLogin" class="sr-only">Login</label>
+  <input type="login" id="inputLogin" [(ngModel)]="cliente.login" name="login" class="form-control" placeholder="Login" required="" autofocus="">
+  <label for="inputSenha" class="sr-only">Senha</label>
+  <input type="password" id="inputSenha" [(ngModel)]="cliente.senha" name="senha" class="form-control" placeholder="Senha" required="">
+
+  <div *ngIf="mensagem" class="alert alert-danger" role="alert">
+    {{mensagem}}
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" (click)="fazerLogin()" type="submit">Login</button>
+  <p class="mt-5 mb-3 text-muted">© 2020-2022</p>
+</form>
